@@ -115,10 +115,12 @@ const upperFirst = function (str) {
     let word = str.split(" ");
     //creo un ciclo in cui dico che "a" è il contatore e si sposta nei vari elementi dell'array
     for (let i = 0; i < word.length; i++) {
-      //assegno a una variabile l'elemento corrente dell'array word
-
+      //con word[i][0].toUpperCase accedo alla prima lettera e la faccio diventare maiuscola
+      //con word[i].slice(1) prendo il resto della stringa a partire dall'indice 1, quindi tutto il resto dopo l'iniziale
+      //tutto questo viene inserito all'interno del nuovo array word
       word[i] = word[i][0].toUpperCase() + word[i].slice(1);
     }
+    //riunisco tutti i vari elementi dell'array in un unica stringa e li separo da uno spazio grazie a .join("")
     str = word.join(" ");
     return str;
   }
