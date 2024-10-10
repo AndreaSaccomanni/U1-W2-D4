@@ -109,6 +109,7 @@ console.log("La stringa invertita è:", reverseString("Andrea"));
 */
 
 const upperFirst = function (str) {
+  //verifico che il parametro sia una stringa
   if (typeof str === "string") {
     //creo un array i cui elementi sono le parole della stringa inserita
     let word = str.split(" ");
@@ -116,9 +117,7 @@ const upperFirst = function (str) {
     for (let i = 0; i < word.length; i++) {
       //assegno a una variabile l'elemento corrente dell'array word
 
-      let a = word[i];
-
-      word[i] = a[0].toUpperCase() + a.slice(1);
+      word[i] = word[i][0].toUpperCase() + word[i].slice(1);
     }
     str = word.join(" ");
     return str;
