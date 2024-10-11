@@ -54,7 +54,7 @@ function boundary(n) {
     }
   }
 }
-console.log("Esercizio 4: ", boundary(100));
+console.log("Esercizio 4: ", boundary(100000));
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
@@ -97,8 +97,9 @@ console.log(check3and7(3));
 */
 
 const reverseString = function (str) {
+  //creo un array i cui elementi sono le lettere della str
   let strArr = str.split("");
-
+  //con . reverse vengono inveritte le lettere e poi trasformo l'array in stringa con .join
   return strArr.reverse().join("");
 };
 console.log("La stringa invertita è:", reverseString("Andrea"));
